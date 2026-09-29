@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teddy Garza, Mechanical Engineering Portfolio</title>
+  <meta name="description" content="Teddy Garza, mechanical engineering student at UT Austin. Spacecraft structures at Intuitive Machines and Formula SAE wheel assemblies at Longhorn Racing Electric.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="nav-name" href="#top">Teddy Garza</a>
+  <nav>
+    <a href="#work">Work</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a class="nav-resume" href="Teddy_Garza_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO: drawn like a drawing sheet ============ -->
+  <section class="sheet" aria-label="Introduction">
+    <div class="zones zones-top" aria-hidden="true"><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
+    <div class="zones zones-side" aria-hidden="true"><span>D</span><span>C</span><span>B</span><span>A</span></div>
+
+    <div class="sheet-body">
+      <div class="hero-text">
+        <h1>Teddy<br>Garza</h1>
+        <p class="lede">Mechanical engineering student at UT Austin. I design structures for lunar landers and wheel assemblies for a Formula SAE car, and I like to machine, print, and test what I draw.</p>
+      </div>
+      <figure class="hero-photo">
+        <img src="images/hub-machined.jpg" alt="Machined aluminum front wheel hubs for the Longhorn Racing Electric car">
+      </figure>
+    </div>
+
+    <dl class="title-block">
+      <div><dt>Drawn by</dt><dd>T. Garza</dd></div>
+      <div><dt>School</dt><dd>UT Austin, B.S. Mechanical Engineering, May 2029</dd></div>
+      <div><dt>Most recent</dt><dd>Structures Design Intern, Intuitive Machines</dd></div>
+      <div><dt>Contact</dt><dd><a href="mailto:teddy.e.garza@gmail.com">teddy.e.garza@gmail.com</a><br><a href="https://www.linkedin.com/in/teddy-garza" target="_blank" rel="noopener">LinkedIn</a></dd></div>
+    </dl>
+  </section>
+
+  <!-- ============ PROJECTS ============
+       To add a photo to a project: put the file in the /images folder,
+       then copy one <figure> line inside that project's "gallery" and change the file name + caption.
+  -->
+  <section id="work" class="work">
+    <h2 class="section-title">Selected work</h2>
+
+    <!-- IM-4 -->
+    <article class="project">
+      <div class="project-text">
+        <p class="project-org">Intuitive Machines, Jun–Aug 2026</p>
+        <h3>IM-4 communications box mockup</h3>
+        <p class="result"><strong>53</strong> connectors, <strong>13</strong> boxes, built to full scale</p>
+        <p class="objective">A physical mockup of the IM-4 comms box, with every external connector, so the integration team could test box placement and harness routing before flight hardware existed.</p>
+        <ul>
+          <li>Sourced all 53 connectors from manufacturer drawings, matching shell size, keying, and backshell geometry so mated harnesses sit at true depth and clocking.</li>
+          <li>Redesigned 13 component boxes to their flight envelopes, each carrying its connectors at the correct location and orientation.</li>
+          <li>3D printed the boxes and connector interfaces, then built the full-scale foam structure with a fellow intern.</li>
+          <li>The team used it to route harnesses in place and catch clearance and bend-radius problems while changes were still cheap.</li>
+        </ul>
+        <p class="tools">Creo, Technical drawings, Design for assembly, 3D printing</p>
+      </div>
+      <div class="gallery">
+        <figure class="wide"><img src="images/im4-mockup-foam.jpg" alt="Full-scale foam mockup with 3D printed component boxes" loading="lazy"><figcaption>Full-scale mockup with printed boxes installed</figcaption></figure>
+        <figure><img src="images/im4-box-dsub.jpg" alt="Printed component box with D-sub and coax connectors" loading="lazy"><figcaption>Box with D-sub and coax connectors</figcaption></figure>
+        <figure><img src="images/im4-box-coax.jpg" alt="Printed component box with four coax connectors" loading="lazy"><figcaption>Coax connector box</figcaption></figure>
+      </div>
+    </article>
+
+    <!-- LRA -->
+    <article class="project">
+      <div class="project-text">
+        <p class="project-org">Intuitive Machines, Jun–Aug 2026</p>
+        <h3>Laser Retroreflector Array bracket</h3>
+        <p class="result"><strong>61%</strong> lighter at a 2.5 safety factor</p>
+        <p class="objective">Take as much mass out of the LRA payload bracket as possible while keeping it strong enough for a 60g load.</p>
+        <ul>
+          <li>Iterated through 5 designs in Creo, removing material where stress was low while keeping the mounting interface intact.</li>
+          <li>Built 3 FEA setups in Creo Simulate to check each design against the 60g MAC static load case.</li>
+          <li>Validated the bolted joints with hand calculations in Excel.</li>
+        </ul>
+        <p class="tools">Creo, Creo Simulate, Excel</p>
+      </div>
+      <div class="nda">
+        <p>Imagery and CAD withheld under NDA.</p>
+        <p>Happy to walk through the design in person.</p>
+      </div>
+    </article>
+
+    <!-- LEIA -->
+    <article class="project">
+      <div class="project-text">
+        <p class="project-org">Intuitive Machines, Jun–Aug 2026</p>
+        <h3>LEIA payload sunshade</h3>
+        <p class="result"><strong>3.2×</strong> stiffer and <strong>4%</strong> lighter</p>
+        <p class="objective">Stiffen the LEIA sunshade to prevent acoustic resonance, while cutting weight and keeping the same shading coverage.</p>
+        <ul>
+          <li>Ran modal analysis on the carbon-fiber sandwich panel and titanium C-channel assembly to set the stiffness target.</li>
+          <li>Designed 3 support pillar parts and evaluated them across 7 iterations, tracking stiffness and mass for each.</li>
+          <li>Final design added a corner pillar and tightened pillar spacing, shading the same area.</li>
+        </ul>
+        <p class="tools">Creo, Creo Simulate, Excel, Design for assembly</p>
+      </div>
+      <div class="nda">
+        <p>Imagery and CAD withheld under NDA.</p>
+        <p>Happy to walk through the design in person.</p>
+      </div>
+    </article>
+
+    <!-- Hub -->
+    <article class="project">
+      <div class="project-text">
+        <p class="project-org">Longhorn Racing Electric, Aug 2025–Jan 2026</p>
+        <h3>FSAE front wheel hub</h3>
+        <p class="result"><strong>1.75</strong> factor of safety under a 2-2-3g load case</p>
+        <p class="objective">A lightweight, high-stiffness front hub with minimal unsprung mass.</p>
+        <ul>
+          <li>Packaged the hub tightly inside the upright as the integration point for the wheel, bearings, brake rotor, and preload nuts.</li>
+          <li>Iterated in ANSYS to minimize stress concentrations across every design.</li>
+          <li>Analyzed fatigue under typical driving loads plus vibration from vehicle transport.</li>
+          <li>Used hand calculations to pick the retention method for the hub dowel pins.</li>
+        </ul>
+        <p class="tools">SOLIDWORKS, ANSYS, GD&amp;T, Design for manufacturing</p>
+      </div>
+      <div class="gallery">
+        <figure class="wide"><img src="images/hub-drawing.png" alt="Drawing of the front hub with GD&T callouts" loading="lazy"><figcaption>Manufacturing drawing</figcaption></figure>
+        <figure><img src="images/hub-assembly-cad.jpg" alt="CAD render of the hub in the upright assembly" loading="lazy"><figcaption>Hub in the upright assembly</figcaption></figure>
+        <figure><img src="images/hub-fea.jpg" alt="ANSYS von Mises stress plot of the hub and rotor" loading="lazy"><figcaption>Static structural FEA</figcaption></figure>
+      </div>
+    </article>
+
+    <!-- Wheel speed sensor -->
+    <article class="project">
+      <div class="project-text">
+        <p class="project-org">Longhorn Racing Electric, Dec 2025–Apr 2026</p>
+        <h3>Wheel speed sensor integration</h3>
+        <p class="result"><strong>20%</strong> less sensor dropout, IP-67 sealed</p>
+        <p class="objective">The unsprung-side parts that hold the wheel speed PCB: a waterproof enclosure and a magnet-carrying bearing preload nut.</p>
+        <ul>
+          <li>Designed the enclosure with integrated O-ring grooves and verified IP-67 sealing with submersion and high-pressure spray.</li>
+          <li>Added a pin-and-slot locating system so the Hall effect sensors stay aligned, plus a sealed USB-C port for trackside access.</li>
+          <li>Calculated the required magnetic flux density and specced stronger magnets for reliable triggering.</li>
+          <li>Made the parts on the team's CNC mill, manual lathe, and 3D printers.</li>
+        </ul>
+        <p class="tools">SOLIDWORKS, Fusion 360 CAM, CNC mill, Lathe, 3D printing</p>
+      </div>
+      <div class="gallery">
+        <figure class="wide"><img src="images/wss-assembly-cad.jpg" alt="CAD of the wheel assembly with sensor enclosure mounted" loading="lazy"><figcaption>Sensor enclosure on the wheel assembly</figcaption></figure>
+        <figure><img src="images/wss-enclosure-cad.jpg" alt="CAD of the enclosure with PCB inside" loading="lazy"><figcaption>Enclosure with PCB</figcaption></figure>
+        <figure><img src="images/wss-enclosures.jpg" alt="Two finished enclosures with boards installed" loading="lazy"><figcaption>Finished enclosures</figcaption></figure>
+        <figure class="wide"><img src="images/preload-nuts.jpg" alt="Two machined preload nuts with magnet pockets" loading="lazy"><figcaption>Machined preload nuts with magnet pockets</figcaption></figure>
+      </div>
+    </article>
+
+    <!-- Robotic hand -->
+    <article class="project">
+      <div class="project-text">
+        <p class="project-org">AP Capstone research, Aug 2023–Apr 2024</p>
+        <h3>Teleoperated robotic hand with haptic glove</h3>
+        <p class="result">Full marks on the AP Research exam</p>
+        <p class="objective">A robotic hand driven by a sensor glove, with haptic feedback so the operator can feel what the hand grips.</p>
+        <ul>
+          <li>Designed the PETG hand in Onshape and 3D printed it, tuning the geometry for grip strength.</li>
+          <li>Wrote Arduino C++ that maps flex sensor readings to servo motion, mirroring finger movement.</li>
+          <li>Built haptic feedback from force sensors and vibration motors, tuning sensor placement and pressure thresholds.</li>
+          <li>Wrote and presented a 4,200-word paper on haptic robotic hands for work in hazardous environments.</li>
+        </ul>
+        <p class="tools">Onshape, Arduino, C++, Circuits, Technical writing</p>
+      </div>
+      <div class="gallery gallery-three">
+        <figure><img src="images/robotic-hand.jpg" alt="Printed robotic hand with red forearm housing servos" loading="lazy"><figcaption>Robotic hand and servo forearm</figcaption></figure>
+        <figure><img src="images/haptic-glove.jpg" alt="Control glove with flex sensors" loading="lazy"><figcaption>Sensor glove</figcaption></figure>
+        <figure><img src="images/hand-and-glove.jpg" alt="Glove controlling the robotic hand" loading="lazy"><figcaption>Glove driving the hand</figcaption></figure>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="experience" class="experience">
+    <h2 class="section-title">Experience</h2>
+    <ol class="timeline">
+      <li>
+        <p class="when">Jun–Aug 2026</p>
+        <div>
+          <h3>Structures Design Intern, Intuitive Machines</h3>
+          <p>Payload brackets, sunshade structure, and the IM-4 comms box mockup. Also ran composite tensile tests and reduced the data to find Young's modulus, Poisson's ratio, and CTE.</p>
+        </div>
+      </li>
+      <li>
+        <p class="when">Sep 2025–now</p>
+        <div>
+          <h3>Vehicle Dynamics Member, Longhorn Racing Electric</h3>
+          <p>Designed 6 wheel assembly parts including front and rear hubs, the centerlock nut, and magnet preload nuts. Sized bearings in MESYS to cut unsprung mass and reduce toe compliance in corners.</p>
+        </div>
+      </li>
+      <li>
+        <p class="when">Nov 2024–Aug 2025</p>
+        <div>
+          <h3>Guest Operations Associate, Space Center Houston</h3>
+          <p>Kept guest flow moving during peak attendance and handled admissions.</p>
+        </div>
+      </li>
+      <li>
+        <p class="when">Aug–Dec 2024</p>
+        <div>
+          <h3>Robotics Engineering Mentee, NASA Johnson Space Center</h3>
+          <p>Mentored by Leslie Quiocho. Wrote Arduino C++ firmware that turns real-time accelerometer data into a stopping distance estimate to predict crash severity for airbag deployment.</p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="extras">
+      <div>
+        <h3>Leadership</h3>
+        <p>One of 24 student representatives on the CCISD Superintendent's Student Advisory Council (40,000+ students), where we changed the district GPA policy. Founded the CBHS Science Fair Club and ran a summer workshop for 50+ students.</p>
+      </div>
+      <div>
+        <h3>Robotics &amp; competitions</h3>
+        <p>7 years of VEX, BEST, and FRC, including 2 as systems integration lead. 13 years of science and engineering fairs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" class="skills">
+    <h2 class="section-title">Tools I use</h2>
+    <div class="skill-groups">
+      <div><h3>CAD</h3><p>SOLIDWORKS, Creo, Onshape</p></div>
+      <div><h3>Analysis</h3><p>ANSYS Workbench, Creo Simulate, MESYS, Excel</p></div>
+      <div><h3>Manufacturing</h3><p>Fusion 360 CAM, 3-axis CNC mill, manual lathe, 3D printing, machine shop certified</p></div>
+      <div><h3>Other</h3><p>GD&amp;T, technical drawings, Arduino / C++</p></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <h2>Let's talk</h2>
+  <p>Looking for mechanical and structures internships. U.S. citizen.</p>
+  <p class="footer-links">
+    <a href="mailto:teddy.e.garza@gmail.com">teddy.e.garza@gmail.com</a>
+    <a href="tel:+18326215377">(832) 621-5377</a>
+    <a href="https://www.linkedin.com/in/teddy-garza" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="Teddy_Garza_Resume.pdf" target="_blank" rel="noopener">Download resume</a>
+  </p>
+</footer>
+
+<!-- Click-to-enlarge viewer -->
+<dialog class="lightbox" aria-label="Enlarged image">
+  <button class="lightbox-close" type="button" aria-label="Close">×</button>
+  <img alt="">
+  <p class="lightbox-caption"></p>
+</dialog>
+
+<script>
+  const box = document.querySelector('.lightbox');
+  const boxImg = box.querySelector('img');
+  const boxCap = box.querySelector('.lightbox-caption');
+  document.querySelectorAll('.gallery img, .hero-photo img').forEach(img => {
+    img.tabIndex = 0;
+    const open = () => {
+      boxImg.src = img.src; boxImg.alt = img.alt;
+      const cap = img.closest('figure').querySelector('figcaption');
+      boxCap.textContent = cap ? cap.textContent : '';
+      box.showModal();
+    };
+    img.addEventListener('click', open);
+    img.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+  });
+  box.addEventListener('click', e => { if (e.target === box || e.target.classList.contains('lightbox-close')) box.close(); });
+</script>
+</body>
+</html>
