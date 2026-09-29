@@ -18,6 +18,7 @@
   <a class="nav-name" href="#top">Teddy Garza</a>
   <nav>
     <a href="#work">Work</a>
+    <a href="#about">About</a>
     <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
     <a class="nav-resume" href="Teddy_Garza_Resume.pdf" target="_blank" rel="noopener">Resume</a>
@@ -36,8 +37,8 @@
         <h1>Teddy<br>Garza</h1>
         <p class="lede">Mechanical engineering student at UT Austin. I design structures for lunar landers and wheel assemblies for a Formula SAE car, and I like to machine, print, and test what I draw.</p>
       </div>
-      <figure class="hero-photo">
-        <img src="images/hub-machined.jpg" alt="Machined aluminum front wheel hubs for the Longhorn Racing Electric car">
+      <figure class="hero-photo headshot">
+        <img src="images/headshot.jpg" alt="Portrait of Teddy Garza">
       </figure>
     </div>
 
@@ -120,6 +121,10 @@
 
     <!-- Hub -->
     <article class="project">
+      <figure class="project-banner">
+        <img src="images/machined-unsprung-parts.jpg" alt="Machined aluminum unsprung parts including hubs, preload nuts, and uprights on a black background" loading="lazy">
+        <figcaption>Machined unsprung parts for the car, including my front hubs and preload nuts</figcaption>
+      </figure>
       <div class="project-text">
         <p class="project-org">Longhorn Racing Electric, Aug 2025–Jan 2026</p>
         <h3>FSAE front wheel hub</h3>
@@ -135,12 +140,16 @@
       </div>
       <div class="gallery">
         <figure class="wide model">
-          <model-viewer src="models/front-hub-assembly.glb" alt="Interactive 3D model of the front hub assembly with rotor, bearings, and centerlock nut"
+          <model-viewer src="model/front-hub-assembly.glb" alt="Interactive 3D model of the front hub assembly with rotor, bearings, and centerlock nut"
             camera-controls touch-action="pan-y" auto-rotate auto-rotate-delay="0" rotation-per-second="18deg"
             camera-orbit="35deg 72deg auto" environment-image="neutral" exposure="1.05" shadow-intensity="0.5" interaction-prompt="none"></model-viewer>
           <figcaption>Front hub assembly. Drag to rotate, scroll or pinch to zoom.</figcaption>
         </figure>
-        <figure class="wide"><img src="images/hub-drawing.png" alt="Drawing of the front hub with GD&T callouts" loading="lazy"><figcaption>Manufacturing drawing</figcaption></figure>
+        <figure class="wide natural"><img src="images/hub-exploded-side.jpg" alt="Exploded side view render of the front hub, upright, bearings, rotor, and centerlock nut" loading="lazy"><figcaption>Exploded view along the wheel axis</figcaption></figure>
+        <figure><img src="images/hub-exploded-wheel.jpg" alt="Exploded render of the front corner with wheel, rotor, caliper, and upright" loading="lazy"><figcaption>Exploded front corner with the wheel</figcaption></figure>
+        <figure><img src="images/hub-machined.jpg" alt="Finished machined aluminum front hubs" loading="lazy"><figcaption>Machined front hubs</figcaption></figure>
+        <figure class="wide"><img src="images/centerlock-nuts.jpg" alt="Machined aluminum centerlock nuts on a shop bench" loading="lazy"><figcaption>Centerlock nuts fresh off the mill</figcaption></figure>
+        <figure class="wide"><img src="images/hub-drawing.png" alt="Drawing of the front hub with GD&amp;T callouts" loading="lazy"><figcaption>Manufacturing drawing</figcaption></figure>
         <figure><img src="images/hub-assembly-cad.jpg" alt="CAD render of the hub in the upright assembly" loading="lazy"><figcaption>Hub in the upright assembly</figcaption></figure>
         <figure><img src="images/hub-fea.jpg" alt="ANSYS von Mises stress plot of the hub and rotor" loading="lazy"><figcaption>Static structural FEA</figcaption></figure>
       </div>
@@ -190,6 +199,45 @@
         <figure><img src="images/hand-and-glove.jpg" alt="Glove controlling the robotic hand" loading="lazy"><figcaption>Glove driving the hand</figcaption></figure>
       </div>
     </article>
+  </section>
+
+  <!-- ============ ABOUT ============
+       To add a photo to the carousel: put it in /images, then copy one <figure class="slide"> block and change the file name and caption.
+  -->
+  <section id="about" class="about">
+    <h2 class="section-title">About me</h2>
+    <div class="about-intro">
+      <p>I'm happiest when a part goes from CAD to the machine shop to the car, and I like being the one who runs it through each step. Outside of engineering, I'm usually outdoors. Fishing is my favorite way to spend a free day, and hiking has taken me from the chalk cliffs of Møns Klint in Denmark to a climb up Mont Refugio in Italy.</p>
+    </div>
+
+    <div class="carousel" aria-roledescription="carousel" aria-label="Photos of Teddy">
+      <div class="carousel-track" tabindex="0">
+        <figure class="slide">
+          <img src="images/about-rear-hubs.jpg" alt="Teddy holding two machined rear hubs in the machine shop" loading="lazy">
+          <figcaption>Rear hubs I machined for the car</figcaption>
+        </figure>
+        <figure class="slide">
+          <video src="video/car-on-track.mp4" poster="images/car-on-track-poster.jpg" muted loop playsinline preload="metadata" aria-label="Onboard video of the Longhorn Racing Electric car driving and drifting around cones"></video>
+          <figcaption>Longhorn Racing Electric on track</figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="images/about-redfish.jpg" alt="Teddy holding a large redfish on a pier at dusk" loading="lazy">
+          <figcaption>My personal best redfish</figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="images/about-mons-klint.jpg" alt="Teddy on a clifftop trail above the Baltic Sea at Møns Klint" loading="lazy">
+          <figcaption>Hiking Møns Klint, Denmark</figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="images/about-climbing-italy.jpg" alt="Teddy climbing a steep rocky ridge" loading="lazy">
+          <figcaption>Climbing Mont Refugio, Italy</figcaption>
+        </figure>
+      </div>
+      <div class="carousel-controls">
+        <button type="button" class="carousel-btn" data-dir="-1" aria-label="Previous photo">‹</button>
+        <button type="button" class="carousel-btn" data-dir="1" aria-label="Next photo">›</button>
+      </div>
+    </div>
   </section>
 
   <!-- ============ EXPERIENCE ============ -->
@@ -272,7 +320,7 @@
   const box = document.querySelector('.lightbox');
   const boxImg = box.querySelector('img');
   const boxCap = box.querySelector('.lightbox-caption');
-  document.querySelectorAll('.gallery img, .hero-photo img').forEach(img => {
+  document.querySelectorAll('.gallery img, .project-banner img, .slide img').forEach(img => {
     img.tabIndex = 0;
     const open = () => {
       boxImg.src = img.src; boxImg.alt = img.alt;
@@ -284,6 +332,26 @@
     img.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
   });
   box.addEventListener('click', e => { if (e.target === box || e.target.classList.contains('lightbox-close')) box.close(); });
+  // If the 3D file can't be found, say so instead of showing an empty box
+  document.querySelectorAll('model-viewer').forEach(m => m.addEventListener('error', () => {
+    const note = document.createElement('p');
+    note.className = 'model-error';
+    note.textContent = "The 3D model didn't load. Check that model/front-hub-assembly.glb is uploaded.";
+    m.closest('figure').appendChild(note);
+  }));
+  // Carousel arrows scroll one slide at a time
+  const track = document.querySelector('.carousel-track');
+  document.querySelectorAll('.carousel-btn').forEach(btn => btn.addEventListener('click', () => {
+    const slide = track.querySelector('.slide');
+    const step = slide.getBoundingClientRect().width + 16;
+    track.scrollBy({ left: step * Number(btn.dataset.dir), behavior: 'smooth' });
+  }));
+  // Play the video only while it's on screen
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('.slide video').forEach(v => {
+    if (reduce) { v.controls = true; return; }
+    new IntersectionObserver(([e]) => e.isIntersecting ? v.play().catch(() => {}) : v.pause(), { threshold: 0.5 }).observe(v);
+  });
   // Stop the auto-spin for visitors who prefer reduced motion
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.querySelectorAll('model-viewer').forEach(m => m.removeAttribute('auto-rotate'));

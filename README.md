@@ -18,6 +18,10 @@ Live at: https://YOUR-USERNAME.github.io
 Upload a new PDF with the exact same name, `Teddy_Garza_Resume.pdf`, and replace the old one.
 
 ## 3D model
-The spinning hub is `models/front-hub-assembly.glb`, shown with Google's model-viewer.
+The spinning hub is `model/front-hub-assembly.glb`, shown with Google's model-viewer.
 It only loads on the live site (or a local server), not when you double-click index.html.
 To swap in a different model, replace the .glb file (keep the name) or change the `src` in index.html.
+
+## About carousel
+Photos live in `images/` and videos in `video/`. To add one, copy a `<figure class="slide">` block in the About section of index.html and change the file name and caption.
+Keep videos short (under ~20 MB) and saved as H.264 .mp4 so they play in every browser.
