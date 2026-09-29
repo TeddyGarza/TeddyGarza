@@ -193,7 +193,8 @@
         </ul>
         <p class="tools">Onshape, Arduino, C++, Circuits, Technical writing</p>
       </div>
-      <div class="gallery gallery-three">
+      <div class="gallery gallery-video">
+        <figure class="video-tall"><video src="video/robotic-hand.mp4" poster="images/robotic-hand-poster.jpg" muted loop playsinline preload="metadata" aria-label="Video of the robotic hand mirroring finger movements from the sensor glove"></video><figcaption>The hand following the glove in real time</figcaption></figure>
         <figure><img src="images/robotic-hand.jpg" alt="Printed robotic hand with red forearm housing servos" loading="lazy"><figcaption>Robotic hand and servo forearm</figcaption></figure>
         <figure><img src="images/haptic-glove.jpg" alt="Control glove with flex sensors" loading="lazy"><figcaption>Sensor glove</figcaption></figure>
         <figure><img src="images/hand-and-glove.jpg" alt="Glove controlling the robotic hand" loading="lazy"><figcaption>Glove driving the hand</figcaption></figure>
@@ -348,7 +349,7 @@
   }));
   // Play the video only while it's on screen
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  document.querySelectorAll('.slide video').forEach(v => {
+  document.querySelectorAll('.slide video, .gallery video').forEach(v => {
     if (reduce) { v.controls = true; return; }
     new IntersectionObserver(([e]) => e.isIntersecting ? v.play().catch(() => {}) : v.pause(), { threshold: 0.5 }).observe(v);
   });

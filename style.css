@@ -169,6 +169,9 @@ h1 {
 .project-banner img { width: 100%; height: auto; background: #000; cursor: zoom-in; }
 .project-banner figcaption { font-size: 0.8rem; color: var(--steel); margin-top: 0.35rem; }
 .gallery-three { grid-template-columns: repeat(3, 1fr); }
+.gallery-video { grid-template-columns: 1.1fr 1fr; }
+.gallery-video .video-tall { grid-row: span 3; }
+.gallery-video video { display: block; width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border: 1px solid var(--rule); background: var(--panel); }
 .gallery figcaption { font-size: 0.8rem; color: var(--steel); margin-top: 0.35rem; }
 
 /* NDA panel: section-view hatching */
