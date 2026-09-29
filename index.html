@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
 </head>
 <body>
 
@@ -133,6 +134,12 @@
         <p class="tools">SOLIDWORKS, ANSYS, GD&amp;T, Design for manufacturing</p>
       </div>
       <div class="gallery">
+        <figure class="wide model">
+          <model-viewer src="models/front-hub-assembly.glb" alt="Interactive 3D model of the front hub assembly with rotor, bearings, and centerlock nut"
+            camera-controls touch-action="pan-y" auto-rotate auto-rotate-delay="0" rotation-per-second="18deg"
+            camera-orbit="35deg 72deg auto" environment-image="neutral" exposure="1.05" shadow-intensity="0.5" interaction-prompt="none"></model-viewer>
+          <figcaption>Front hub assembly. Drag to rotate, scroll or pinch to zoom.</figcaption>
+        </figure>
         <figure class="wide"><img src="images/hub-drawing.png" alt="Drawing of the front hub with GD&T callouts" loading="lazy"><figcaption>Manufacturing drawing</figcaption></figure>
         <figure><img src="images/hub-assembly-cad.jpg" alt="CAD render of the hub in the upright assembly" loading="lazy"><figcaption>Hub in the upright assembly</figcaption></figure>
         <figure><img src="images/hub-fea.jpg" alt="ANSYS von Mises stress plot of the hub and rotor" loading="lazy"><figcaption>Static structural FEA</figcaption></figure>
@@ -277,6 +284,10 @@
     img.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
   });
   box.addEventListener('click', e => { if (e.target === box || e.target.classList.contains('lightbox-close')) box.close(); });
+  // Stop the auto-spin for visitors who prefer reduced motion
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('model-viewer').forEach(m => m.removeAttribute('auto-rotate'));
+  }
 </script>
 </body>
 </html>

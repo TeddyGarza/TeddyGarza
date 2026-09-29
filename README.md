@@ -16,3 +16,8 @@ Live at: https://YOUR-USERNAME.github.io
 
 ## Update your resume
 Upload a new PDF with the exact same name, `Teddy_Garza_Resume.pdf`, and replace the old one.
+
+## 3D model
+The spinning hub is `models/front-hub-assembly.glb`, shown with Google's model-viewer.
+It only loads on the live site (or a local server), not when you double-click index.html.
+To swap in a different model, replace the .glb file (keep the name) or change the `src` in index.html.

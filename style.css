@@ -154,6 +154,12 @@ h1 {
 }
 .gallery .wide img { aspect-ratio: 16 / 10; }
 .gallery img[src$="drawing.png"] { object-fit: contain; background: #fff; }
+.gallery model-viewer {
+  display: block; width: 100%; aspect-ratio: 16 / 10; height: auto;
+  background: radial-gradient(circle at 50% 40%, #FFFFFF, var(--panel) 75%);
+  border: 1px solid var(--rule);
+  --poster-color: transparent;
+}
 .gallery-three { grid-template-columns: repeat(3, 1fr); }
 .gallery figcaption { font-size: 0.8rem; color: var(--steel); margin-top: 0.35rem; }
 
